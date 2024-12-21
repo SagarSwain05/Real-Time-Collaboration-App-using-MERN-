@@ -1,0 +1,194 @@
+/* CSS Code */
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.app-container {
+  display: flex;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  left: -250px;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #161b22;
+  overflow-y: auto;
+  transition: left 0.3s ease;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.menu-options p {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+/* Main Content Styles */
+.main-content {
+  margin-left: 50px; /* Adjusted to move content slightly right */
+  width: calc(100% - 50px); /* Adjusted to account for left margin */
+  transition: margin-left 0.3s ease;
+  padding: 1rem;
+}
+
+.sidebar.open ~ .main-content {
+  margin-left: 300px; /* Adjusted to match sidebar width */
+  width: calc(100% - 300px); /* Adjusted for sidebar space */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  background-color: #21262d;
+  padding: 1rem;
+  border-bottom: 1px solid #30363d;
+}
+
+.menu-bar {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.document-icon {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.welcome-section h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.welcome-section p {
+  margin-bottom: 1rem;
+}
+
+.learn-more {
+  padding: 0.5rem 1rem;
+  background-color: #238636;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.create-project {
+  margin-top: 2rem;
+}
+
+.create-project h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.new-project {
+  padding: 0.5rem 1rem;
+  background-color: #238636;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Documents Page Styles */
+.documents-page {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.document-preview {
+  width: 60%;
+  padding: 1rem;
+  background-color: #161b22;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.upload-section {
+  width: 35%;
+  padding: 1rem;
+  background-color: #21262d;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.documents-page h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.upload-button {
+  padding: 0.5rem 1rem;
+  background-color: #238636;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 0.5rem;
+  }
+
+  .welcome-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .create-project h2 {
+    font-size: 1.2rem;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .menu-bar {
+    font-size: 1.2rem;
+  }
+
+  .document-icon {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+
+  .documents-page {
+    flex-direction: column;
+  }
+
+  .document-preview,
+  .upload-section {
+    width: 100%;
+  }
+}

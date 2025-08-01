@@ -1,4 +1,4 @@
-// Import necessary module
+// Import necessary modules
 import React, { useState } from 'react';
 import './App.css';
 
